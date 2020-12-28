@@ -7,10 +7,10 @@
 body,
 html {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  padding: 20px;
+  /* height: 100%;
+  width: 100%; */
+  overflow: auto;
   user-select: none;
   font-family: 'Raleway', sans-serif;
   display: flex;
@@ -19,7 +19,10 @@ html {
   background: #f0f0f0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png')
-      39 39,
-    auto;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  height: 15px;
 }

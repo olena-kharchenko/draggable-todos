@@ -4,11 +4,11 @@
   height: 240px;
 }
 
-.content > div {
+.content > div > div {
   position: absolute;
   width: 320px;
   height: 90px;
-  overflow: visible;
+  overflow: hidden;
   pointer-events: auto;
   transform-origin: 50% 50% 0px;
   border-radius: 5px;
@@ -21,15 +21,50 @@
   letter-spacing: 2px;
 }
 
-.content > div:nth-child(1) {
+.content > div:nth-child(n) > div {
   background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
 }
-.content > div:nth-child(2) {
+.content > div:nth-child(2n) > div {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
-.content > div:nth-child(3) {
+.content > div:nth-child(3n) > div {
   background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
 }
-.content > div:nth-child(4) {
+.content > div:nth-child(4n) > div {
   background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}
+.content > div:nth-child(5n) > div {
+  background: linear-gradient(135deg, #7cec7c 0%, #e1ec40 100%);
+}
+
+.item {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 5px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button > svg {
+  width: 25px;
+  height: 25px;
+}
+
+.buttonDelete {
+  right: 5px;
+}
+
+.buttonDone {
+  right: 40px;
 }
