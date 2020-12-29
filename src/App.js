@@ -12,6 +12,19 @@ function App() {
   const [todos, setTodos] = useState(initialTodos);
   const [showModal, setShowModal] = useState(false);
 
+  useEffect(() => {
+    const todos = localStorage.getItem('todos');
+    const parsedTodos = JSON.parse(todos);
+
+    if (parsedTodos) {
+      setTodos(parsedTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
   const addTodo = text => {
     if (text) {
       const todo = {
