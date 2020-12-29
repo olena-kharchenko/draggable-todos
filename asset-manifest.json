@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/draggable-todos/static/css/main.3f8f986b.chunk.css",
+    "main.js": "/draggable-todos/static/js/main.2b858859.chunk.js",
+    "main.js.map": "/draggable-todos/static/js/main.2b858859.chunk.js.map",
+    "runtime-main.js": "/draggable-todos/static/js/runtime-main.7ed19a29.js",
+    "runtime-main.js.map": "/draggable-todos/static/js/runtime-main.7ed19a29.js.map",
+    "static/js/2.d078beb8.chunk.js": "/draggable-todos/static/js/2.d078beb8.chunk.js",
+    "static/js/2.d078beb8.chunk.js.map": "/draggable-todos/static/js/2.d078beb8.chunk.js.map",
+    "index.html": "/draggable-todos/index.html",
+    "static/css/main.3f8f986b.chunk.css.map": "/draggable-todos/static/css/main.3f8f986b.chunk.css.map",
+    "static/js/2.d078beb8.chunk.js.LICENSE.txt": "/draggable-todos/static/js/2.d078beb8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ed19a29.js",
+    "static/js/2.d078beb8.chunk.js",
+    "static/css/main.3f8f986b.chunk.css",
+    "static/js/main.2b858859.chunk.js"
+  ]
+}
