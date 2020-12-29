@@ -31,10 +31,10 @@
   background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
 }
 .content > div:nth-child(4n) > div {
-  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #3dee3d 0%, #e6f332 100%);
 }
 .content > div:nth-child(5n) > div {
-  background: linear-gradient(135deg, #7cec7c 0%, #e1ec40 100%);
+  background: linear-gradient(135deg, #c3cfe2 0%, #5d95ee 100%);
 }
 
 .item {
@@ -57,6 +57,7 @@ button {
 }
 
 button > svg {
+  fill: #ffffff;
   width: 25px;
   height: 25px;
 }

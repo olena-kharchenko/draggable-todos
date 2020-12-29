@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import clamp from 'lodash-es/clamp';
 import swap from 'lodash-move';
 import { useGesture } from 'react-use-gesture';
 import { useSprings, animated, interpolate } from 'react-spring';
 import { RiDeleteBack2Line } from 'react-icons/ri';
+import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { MdDone } from 'react-icons/md';
 import s from './DraggableList.module.css';
 
@@ -40,7 +41,6 @@ export default function DraggableList({
       0,
       items.length - 1,
     );
-
     const newOrder = swap(order.current, curIndex, curRow);
     setSprings(fn(newOrder, down, originalIndex, curIndex, y)); // Feed springs new style data, they'll animate the view without causing a single render
     if (!down) order.current = newOrder;
@@ -69,12 +69,18 @@ export default function DraggableList({
                 <button
                   className={s.buttonDone}
                   onClick={() => onToggleCompleted(todos[i].id)}
+                  aria-label="todo done"
                 >
-                  <MdDone />
+                  {todos[i].completed ? (
+                    <BsArrowCounterclockwise />
+                  ) : (
+                    <MdDone />
+                  )}
                 </button>
                 <button
                   className={s.buttonDelete}
                   onClick={() => onDeleteTodo(todos[i].id)}
+                  aria-label="todo delete"
                 >
                   <RiDeleteBack2Line />
                 </button>
