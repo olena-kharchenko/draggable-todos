@@ -32,6 +32,7 @@ export default function DraggableList({
   onDeleteTodo,
 }) {
   const items = todos.map(item => item.text);
+
   const order = useRef(items.map((_, index) => index)); // Store indicies as a local ref, this represents the item order
   const [springs, setSprings] = useSprings(items.length, fn(order.current)); // Create springs, each corresponds to an item, controlling its transform, scale, etc.
   const bind = useGesture(({ args: [originalIndex], down, delta: [, y] }) => {
@@ -42,9 +43,14 @@ export default function DraggableList({
       items.length - 1,
     );
     const newOrder = swap(order.current, curIndex, curRow);
+
     setSprings(fn(newOrder, down, originalIndex, curIndex, y)); // Feed springs new style data, they'll animate the view without causing a single render
     if (!down) order.current = newOrder;
   });
+
+  useEffect(() => {
+    order.current = [...order.current, order.current.length];
+  }, [todos]);
 
   return (
     <div className={s.content} style={{ height: items.length * 100 }}>

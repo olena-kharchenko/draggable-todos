@@ -2,12 +2,8 @@
   margin: 0;
   padding: 0;
 
-  overflow: visible;
   user-select: none;
   font-family: 'Raleway', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: top;
 
   background: #f0f0f0;
 }

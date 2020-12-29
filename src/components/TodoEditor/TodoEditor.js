@@ -6,7 +6,7 @@ function TodoEditor({ onSubmit }) {
   const [message, setMessage] = useState('');
 
   const handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     onSubmit(message);
     setMessage('');
   };
@@ -14,6 +14,7 @@ function TodoEditor({ onSubmit }) {
   return (
     <form className={s.TodoEditor} onSubmit={handleSubmit}>
       <textarea
+        autoFocus
         className={s.textarea}
         value={message}
         onChange={e => setMessage(e.currentTarget.value)}
