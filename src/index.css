@@ -26,3 +26,7 @@ p {
   padding: 0;
   height: 15px;
 }
+
+.done {
+  text-decoration: line-through;
+}

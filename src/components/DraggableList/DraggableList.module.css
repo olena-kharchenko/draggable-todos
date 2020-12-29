@@ -13,12 +13,12 @@
   transform-origin: 50% 50% 0px;
   border-radius: 5px;
   color: white;
-  line-height: 90px;
-  padding-left: 32px;
+  padding: 40px 10px 10px 10px;
   font-size: 14.5px;
   background: lightblue;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .content > div:nth-child(n) > div {

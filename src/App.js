@@ -1,6 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-
-import ToDoList from './components/ToDoList';
+import { useState, useEffect } from 'react';
 import DraggableList from './components/DraggableList';
 import Container from './components/Container';
 import initialTodos from './todos.json';
@@ -8,17 +6,39 @@ import initialTodos from './todos.json';
 function App() {
   const [todos, setTodos] = useState(initialTodos);
 
-  const deleteToDo = toDoId => {
-    setTodos(todos.filter(todo => todo.id !== toDoId));
+  // addTodo = text => {
+  //   const todo = {
+  //     id: shortid.generate(),
+  //     text,
+  //     completed: false,
+  //   };
+
+  //   this.setState(({ todos }) => ({
+  //     todos: [todo, ...todos],
+  //   }));
+  // };
+
+  const deleteTodo = todoId => {
+    console.log(todoId);
+    setTodos(todos.filter(todo => todo.id !== todoId));
   };
 
-  useEffect(() => {}, []);
+  const toggleCompleted = todoId => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === todoId ? { ...todo, completed: !todo.completed } : todo,
+      ),
+    );
+  };
 
   return (
     <Container>
+      {/* <TodoEditor onSubmit={this.addTodo} /> */}
+
       <DraggableList
-        items={todos.map(item => item.text)}
-        onDeleteToDo={deleteToDo}
+        todos={todos}
+        onDeleteTodo={deleteTodo}
+        onToggleCompleted={toggleCompleted}
       />
     </Container>
   );

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import clamp from 'lodash-es/clamp';
 import swap from 'lodash-move';
 import { useGesture } from 'react-use-gesture';
@@ -25,7 +25,12 @@ const fn = (order, down, originalIndex, curIndex, y) => index =>
         immediate: false,
       };
 
-export default function DraggableList({ items, onDeleteToDo }) {
+export default function DraggableList({
+  todos,
+  onToggleCompleted,
+  onDeleteTodo,
+}) {
+  const items = todos.map(item => item.text);
   const order = useRef(items.map((_, index) => index)); // Store indicies as a local ref, this represents the item order
   const [springs, setSprings] = useSprings(items.length, fn(order.current)); // Create springs, each corresponds to an item, controlling its transform, scale, etc.
   const bind = useGesture(({ args: [originalIndex], down, delta: [, y] }) => {
@@ -60,16 +65,16 @@ export default function DraggableList({ items, onDeleteToDo }) {
             }}
             children={
               <>
-                <p>{items[i]}</p>
+                <p className={todos[i].completed ? 'done' : null}>{items[i]}</p>
                 <button
                   className={s.buttonDone}
-                  onClick={() => onDeleteToDo(1)}
+                  onClick={() => onToggleCompleted(todos[i].id)}
                 >
                   <MdDone />
                 </button>
                 <button
                   className={s.buttonDelete}
-                  onClick={() => onDeleteToDo(1)}
+                  onClick={() => onDeleteTodo(todos[i].id)}
                 >
                   <RiDeleteBack2Line />
                 </button>
