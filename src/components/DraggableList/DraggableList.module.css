@@ -22,19 +22,19 @@
 }
 
 .content > div:nth-child(n) > div {
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(135deg, #f5c528 0%, #fda085 100%);
 }
 .content > div:nth-child(2n) > div {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #d93deb 0%, #f5576c 100%);
 }
 .content > div:nth-child(3n) > div {
-  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+  background: linear-gradient(135deg, #1accc0 0%, #b490ca 100%);
 }
 .content > div:nth-child(4n) > div {
-  background: linear-gradient(135deg, #3dee3d 0%, #e6f332 100%);
+  background: linear-gradient(135deg, #25af25 0%, #e6f332 100%);
 }
 .content > div:nth-child(5n) > div {
-  background: linear-gradient(135deg, #c3cfe2 0%, #5d95ee 100%);
+  background: linear-gradient(135deg, #3875d8 0%, #9ab4dd 100%);
 }
 
 .item {
