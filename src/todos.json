@@ -1,21 +1,21 @@
 [
   {
     "id": "id-1",
-    "text": "Поставить елку",
+    "text": "HTML",
     "completed": false
   },
-  { "id": "id-2", "text": "Посмотреть мемы", "completed": true },
-  { "id": "id-3", "text": "Купить подарки", "completed": false },
-  { "id": "id-4", "text": "Приготовить оливье", "completed": false },
+  { "id": "id-2", "text": "CSS", "completed": true },
+  { "id": "id-3", "text": "javascript", "completed": false },
+  { "id": "id-4", "text": "async/await", "completed": false },
   {
     "id": "id-5",
-    "text": "Сделать бутерброды с красной икрой",
+    "text": "react components",
     "completed": false
   },
   {
     "id": "id-6",
-    "text": "Загадать желание под бой курантов",
+    "text": "hooks",
     "completed": false
   },
-  { "id": "id-7", "text": "Заснуть в салате", "completed": false }
+  { "id": "id-7", "text": "redux", "completed": false }
 ]
