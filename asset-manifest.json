@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/draggable-todos/static/css/main.84f39f2a.chunk.css",
-    "main.js": "/draggable-todos/static/js/main.fd0b128e.chunk.js",
-    "main.js.map": "/draggable-todos/static/js/main.fd0b128e.chunk.js.map",
+    "main.js": "/draggable-todos/static/js/main.f4f75265.chunk.js",
+    "main.js.map": "/draggable-todos/static/js/main.f4f75265.chunk.js.map",
     "runtime-main.js": "/draggable-todos/static/js/runtime-main.7ed19a29.js",
     "runtime-main.js.map": "/draggable-todos/static/js/runtime-main.7ed19a29.js.map",
     "static/js/2.d078beb8.chunk.js": "/draggable-todos/static/js/2.d078beb8.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.7ed19a29.js",
     "static/js/2.d078beb8.chunk.js",
     "static/css/main.84f39f2a.chunk.css",
-    "static/js/main.fd0b128e.chunk.js"
+    "static/js/main.f4f75265.chunk.js"
   ]
 }
